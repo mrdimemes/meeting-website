@@ -1,6 +1,7 @@
 import React from "react";
 import ModalWindow from "../ModalWindow";
 import Button from "../../UI/Button";
+import "../../../styles/scss/components/quiz/QuizSecondStep.scss";
 
 
 function QuizSecondStep() {
