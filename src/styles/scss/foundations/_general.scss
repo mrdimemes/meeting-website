@@ -6,10 +6,17 @@ body {
   margin: 0;
 }
 
-h1 {
+h1, h2 {
   font-family: "Comfortaa", cursive;
   margin: 0;
+}
+
+h1 {
   font-size: 3.6em;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
 }
 
 p {
