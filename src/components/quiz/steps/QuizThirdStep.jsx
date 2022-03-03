@@ -6,7 +6,7 @@ import "../../../styles/scss/components/quiz/QuizThirdStep.scss";
 
 function QuizThirdStep() {
   return (
-    <ModalWindow className="quizThird-step">
+    <ModalWindow className="quiz-third-step">
       <h1 className="modal-window__label quiz-third-step__label">Шаг 3</h1>
       <p className="modal-window__massage quiz-third-step__massage">
         Вы не будете оскорблять или писать негативного девушкам,
