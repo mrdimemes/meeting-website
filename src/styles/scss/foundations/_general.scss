@@ -1,0 +1,16 @@
+@use "colors";
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Comfortaa", cursive;
+}
+
+.page {
+  background-color: colors.$main-color;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
