@@ -1,0 +1,34 @@
+@use "../../foundations/mixins";
+@use "../../foundations/colors";
+
+.modal-window {
+  @include mixins.flex-centered();
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+  }
+  &__window {
+    z-index: 1;
+    background: 
+      url("../../../../assets/images/svg/modal-window-decoration.svg") no-repeat right 48px top 53px, 
+      url("../../../../assets/images/svg/modal-window-decoration.svg") no-repeat right 13px top 28px / 25px, 
+      url("../../../../assets/images/svg/modal-window-decoration.svg") no-repeat right 78px top 18px / 25px, 
+      colors.$additional-color;
+    width: 600px;
+    box-sizing: border-box;
+    border: 7px solid colors.$interact-color;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px black;
+    padding: 80px 88px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+  }
+}
