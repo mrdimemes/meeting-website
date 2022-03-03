@@ -1,0 +1,9 @@
+.quiz-third-step {
+  &__buttons-wrapper {
+    display: flex;
+    column-gap: 20px;
+  }
+  &__button {
+    width: 183px;
+  }
+}
