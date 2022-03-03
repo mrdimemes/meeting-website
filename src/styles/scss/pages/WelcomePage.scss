@@ -1,15 +1,12 @@
 @use "../foundations/colors";
 @use "../foundations/general";
 
-
 .welcome-page {
-
-
   &__background-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-rows: repeat(10, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
       "a c e"
       "a c e"
       "a c e"
@@ -24,6 +21,31 @@
     grid-gap: 20px;
     height: 100vh;
     box-sizing: border-box;
+
+    @media screen and (max-width: 1024px) {
+      padding: 40px 16px;
+      grid-gap: 16px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 30px 12px;
+      grid-gap: 12px;
+    }
+    @media screen and (max-width: 480px) {
+      padding: 30px 8px;
+      grid-gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "a e"
+        "a e"
+        "c e"
+        "c b"
+        "c b"
+        "c b"
+        "f b"
+        "f d"
+        "f d"
+        "f d";
+    }
   }
 
   &__card {
@@ -60,4 +82,3 @@
     }
   }
 }
-
