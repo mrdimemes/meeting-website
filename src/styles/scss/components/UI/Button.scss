@@ -1,0 +1,22 @@
+@use "../../foundations/general";
+@use "../../foundations/colors";
+@use "../../foundations/mixins";
+
+
+.Button {
+  @include mixins.flex-centered();
+  @include mixins.block(224px, 54px);
+  box-shadow: 0px 4px 15px 4px #00000026;
+  background-color: colors.$interact-color;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.6em;
+  line-height: 1.125;
+  cursor: pointer;
+
+}

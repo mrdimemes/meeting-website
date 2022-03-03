@@ -25,10 +25,11 @@
     border: 7px solid colors.$interact-color;
     border-radius: 6px;
     box-shadow: 0 3px 10px black;
-    padding: 80px 88px;
+    padding: 80px 65px;
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 35px;
   }
 }
