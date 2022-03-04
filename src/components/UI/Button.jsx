@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import "../../styles/scss/components/UI/Button.scss";
 
 
-function Button({ className, theme, onClick, children }) {
+function Button({ className, theme, type, onClick, children }) {
   return (
     <button
       onClick={onClick}
@@ -13,6 +13,7 @@ function Button({ className, theme, onClick, children }) {
         className,
         { [`Button_theme_${theme}`]: theme }
       )}
+      type={type ? type : "button"}
     >
       {children}
     </button >
