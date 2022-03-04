@@ -1,0 +1,139 @@
+@use "../foundations/colors";
+@use "../foundations/mixins";
+
+
+.Form {
+  width: 385px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__field {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 54px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.6em;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid colors.$inactive-color;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    &::placeholder {
+      color: colors.$inactive-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__select {
+    background-color: #fff;
+    padding: 0;
+    text-align: left;
+    color: colors.$inactive-color;
+    position: relative;
+    &_active {
+      border-radius: 6px 6px 0 0;
+    }
+  }
+
+  &__select-active {
+    font-size: 16px;
+    padding: 0 20px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &_active {
+      color: black;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-image: url("../../../assets/images/svg/select-arrow.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  &__select-popup {
+    position: absolute;
+    right: -1px;
+    top: 54px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid colors.$inactive-color;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    display: none;
+    z-index: 5;
+    &_active {
+      display: block;
+    }
+  }
+  &__popup-item {
+    height: 54px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border-top: 1px solid colors.$inactive-color;
+  }
+  &__popup-item-marker {
+    margin: 0;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid colors.$inactive-color;
+    @include mixins.flex-centered();
+    &_active {
+      border: 1px solid colors.$interact-color;
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: colors.$interact-color;
+      }
+    }
+  }
+  &__popup-item-text {
+    color: colors.$inactive-color;
+    font-size: 16px;
+    line-height: 1;
+    &_active {
+      color: black;
+    }
+  }
+  &__button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  &__checkbox-wrapper {
+    margin-top: 15px;
+    display: flex;
+    column-gap: 8px;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  &__checkbox {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+  }
+  &__checkbox-label {
+    font-size: 1.4em;
+    font-weight: 300;
+    text-align: left;
+    width: min-content;
+    flex-grow: 1;
+  }
+}

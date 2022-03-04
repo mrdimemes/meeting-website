@@ -5,9 +5,9 @@
 
 .Button {
   @include mixins.flex-centered();
-  @include mixins.block(224px, 54px);
+  min-height: 54px;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 30px;
   box-shadow: 0px 4px 15px 4px #00000026;
   border-radius: 6px;
   text-transform: uppercase;
@@ -20,11 +20,14 @@
     border: 0;
     background-color: colors.$interact-color;
     color: white;
-
   }
   &_theme_additional {
     border: 1px solid colors.$interact-color;
     background-color: colors.$additional-color;
     color: colors.$interact-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }
