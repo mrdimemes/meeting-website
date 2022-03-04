@@ -1,5 +1,5 @@
 import React from "react";
-import ModalWindow from "../ModalWindow";
+import { ModalWindow, Form } from "../../components";
 
 
 function QuizForm() {
@@ -8,7 +8,7 @@ function QuizForm() {
       <h1 className="modal-window__label quiz-form__label">
         Заполните форму:
       </h1>
-      
+      <Form />
     </ModalWindow>
   )
 }

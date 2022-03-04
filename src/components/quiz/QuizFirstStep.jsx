@@ -1,6 +1,5 @@
 import React from "react";
-import ModalWindow from "../ModalWindow";
-import Button from "../../UI/Button";
+import { ModalWindow, Button } from "../../components";
 
 
 function QuizFirstStep() {
