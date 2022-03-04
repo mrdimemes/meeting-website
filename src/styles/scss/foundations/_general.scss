@@ -26,6 +26,11 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: colors.$interact-color;
+}
+
 .page {
   background-color: colors.$main-color;
   min-height: 100vh;
