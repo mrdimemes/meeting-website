@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import classNames from "classnames";
 import { Button } from "../components";
 import "../styles/scss/components/Form.scss";
 
 
-function Form({ targetArray }) {
+function Form({ targetArray, submitHandler }) {
   const language = navigator.language;
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -51,18 +52,32 @@ function Form({ targetArray }) {
     }
   }
 
+  const sendForm = () => {
+    fetch("https://dev.rusdat.net/api/test/crm/send_lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        age: age,
+        target: targetArray[activeTarget - 1],
+        lang: language,
+        policy: isPolicyAccepted,
+        mailing: isMailingAccepted
+      })
+    });
+    submitHandler();
+  }
+
   return (
-    <form
-      className="Form"
-      action="https://dev.rusdat.net/api/test/crm/send_lead"
-      method="post"
-    >
+    <form className="Form" onSubmit={sendForm}>
       <input
         className="Form__field"
         name="name"
         type="text"
         placeholder="Введите имя"
         required
+        maxLength={50}
         value={name}
         onChange={handleNameChange}
       />
@@ -72,6 +87,7 @@ function Form({ targetArray }) {
         type="email"
         placeholder="E-mail"
         required
+        maxLength={50}
         value={email}
         onChange={handleEmailChange}
       />
@@ -85,14 +101,6 @@ function Form({ targetArray }) {
         required
         value={age}
         onChange={handleAgeChange}
-      />
-      <input name="lang" type="hidden" value={language} />
-      <input name="policy" type="hidden" value={isPolicyAccepted} />
-      <input name="mailing" type="hidden" value={isMailingAccepted} />
-      <input
-        name="target"
-        type="hidden"
-        value={targetArray[activeTarget - 1]}
       />
       <div
         className={classNames(
@@ -172,6 +180,13 @@ function Form({ targetArray }) {
     </form >
   )
 }
+
+
+Form.propTypes = {
+  targetArray: PropTypes.arrayOf(PropTypes.object),
+  submitHandler: PropTypes.func
+};
+
 
 
 export default Form;

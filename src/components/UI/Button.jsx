@@ -4,7 +4,9 @@ import classNames from 'classnames';
 import "../../styles/scss/components/UI/Button.scss";
 
 
-function Button({ className, theme, disabled, type, onClick, children }) {
+function Button(
+  { className, theme, disabled, type, onClick, children }
+) {
   return (
     <button
       onClick={onClick}
@@ -24,6 +26,8 @@ function Button({ className, theme, disabled, type, onClick, children }) {
 Button.propTypes = {
   className: PropTypes.string,
   theme: PropTypes.string,
+  disabled: PropTypes.bool,
+  type: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.any
 };

@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { ModalWindow, Button } from "../../components";
 import "../../styles/scss/components/quiz/QuizWelcome.scss";
 
 
-function QuizWelcome() {
+function QuizWelcome({ nextHandler }) {
   return (
     <ModalWindow className="quiz-welcome">
       <h1 className="modal-window__label quiz-welcome__label">Внимание!</h1>
@@ -21,6 +22,7 @@ function QuizWelcome() {
         <Button
           className="quiz-welcome__button"
           theme="main"
+          onClick={nextHandler}
           children="Продолжить"
         />
         <p className="quiz-welcome__warning">
@@ -31,6 +33,11 @@ function QuizWelcome() {
     </ModalWindow>
   )
 }
+
+
+QuizWelcome.propTypes = {
+  nextHandler: PropTypes.func
+};
 
 
 export default QuizWelcome;

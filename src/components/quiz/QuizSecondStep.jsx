@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { ModalWindow, Button } from "../../components";
 import "../../styles/scss/components/quiz/QuizSecondStep.scss";
 
 
-function QuizSecondStep() {
+function QuizSecondStep({ yesHandler, noHandler }) {
   return (
     <ModalWindow className="quiz-second-step">
       <h1 className="modal-window__label quiz-second-step__label">Шаг 2</h1>
@@ -14,17 +15,25 @@ function QuizSecondStep() {
         <Button
           className="quiz-second-step__button"
           theme="main"
+          onClick={yesHandler}
           children="Да"
         />
         <Button
           className="quiz-second-step__button"
           theme="additional"
+          onClick={noHandler}
           children="Нет"
         />
       </div>
     </ModalWindow>
   )
 }
+
+
+QuizSecondStep.propTypes = {
+  yesHandler: PropTypes.func,
+  noHandler: PropTypes.func
+};
 
 
 export default QuizSecondStep;
