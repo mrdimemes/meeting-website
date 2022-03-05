@@ -3,10 +3,20 @@
 .quiz-success {
   &__sublabel {
     margin-bottom: 25px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: 16px;
+    }
   }
+
   &__massage {
     position: relative;
     margin-bottom: 20px;
+    @media screen and (max-width: 480px) {
+      margin-bottom: 16px;
+    }
     &::after {
       content: "";
       display: block;
@@ -19,16 +29,31 @@
       right: 0;
       margin-left: auto;
       margin-right: auto;
+      @media screen and (max-width: 480px) {
+        bottom: -8px;
+      }
     }
   }
+
   &__warning {
     font-weight: 400;
   }
+
   &__question {
     font-size: 18px;
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
+
   &__button {
     min-height: 54px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 }
