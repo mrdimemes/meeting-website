@@ -8,6 +8,9 @@ export { default as QuizFourthStep } from "./quiz/QuizFourthStep";
 export { default as QuizSuccess } from "./quiz/QuizSuccess";
 export { default as QuizForm } from "./quiz/QuizForm";
 
+export { default as Gallery } from "./gallery/Gallery";
+export { default as GalleryCard } from "./gallery/Gallery";
+
 export { default as Form } from "./Form";
 
 export { default as Button } from "./UI/Button";
