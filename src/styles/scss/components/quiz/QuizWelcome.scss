@@ -1,0 +1,20 @@
+.quiz-welcome {
+  &__massage {
+    margin-bottom: 25px;
+  }
+  &__question {
+    font-family: "Comfortaa", cursive;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 224px;
+    margin-bottom: 20px;
+  }
+  &__warning {
+    font-weight: 300;
+    font-size: 1.4em;
+  }
+}

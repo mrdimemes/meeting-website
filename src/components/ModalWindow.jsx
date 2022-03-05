@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import "../styles/scss/components/quiz/ModalWindow.scss";
+import "../styles/scss/components/ModalWindow.scss";
 
 
 function ModalWindow({ className, children }) {
