@@ -2,8 +2,26 @@
   &__buttons-wrapper {
     display: flex;
     column-gap: 20px;
+    @media screen and (max-width: 768px) {
+      column-gap: 16px;
+    }
+    @media screen and (max-width: 480px) {
+      column-gap: 12px;
+    }
+    @media screen and (max-width: 320px) {
+      flex-direction: column;
+      row-gap: 12px;
+    }
   }
+
   &__button {
     width: 183px;
+    @media screen and (max-width: 768px) {
+      width: 150px;
+    }
+    @media screen and (max-width: 480px) {
+      width: 100px;
+    }
+
   }
 }
