@@ -1,7 +1,6 @@
 @use "../foundations/colors";
 @use "../foundations/mixins";
 
-
 .Form {
   width: 385px;
   margin-left: auto;
@@ -128,6 +127,16 @@
     margin: 0;
     width: 20px;
     height: 20px;
+    border: 1px solid colors.$inactive-color;
+    border-radius: 2px;
+    cursor: pointer;
+    &_checked {
+      border: 1px solid colors.$interact-color;
+      background-color: colors.$interact-color;
+      background-image: url("../../../assets/images/svg/checkbox.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
   &__checkbox-label {
     font-size: 1.4em;

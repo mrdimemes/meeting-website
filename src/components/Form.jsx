@@ -11,6 +11,8 @@ function Form({ targetArray }) {
   const [age, setAge] = React.useState("");
   const [activeTarget, setActiveTarget] = React.useState(null);
   const [isTargetPopupOpen, setIsTargetPopupOpen] = React.useState(false);
+  const [isPolicyAccepted, setIsPolicyAccepted] = React.useState(true);
+  const [isMailingAccepted, setIsMailingAccepted] = React.useState(false);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -27,6 +29,14 @@ function Form({ targetArray }) {
 
   const handlePopup = () => {
     setIsTargetPopupOpen(!isTargetPopupOpen);
+  }
+
+  const handlePolicyCheckbox = () => {
+    setIsPolicyAccepted(!isPolicyAccepted);
+  }
+
+  const handleMailingCheckbox = () => {
+    setIsMailingAccepted(!isMailingAccepted);
   }
 
   const renderActiveTarget = () => {
@@ -77,6 +87,8 @@ function Form({ targetArray }) {
         onChange={handleAgeChange}
       />
       <input name="lang" type="hidden" value={language} />
+      <input name="policy" type="hidden" value={isPolicyAccepted} />
+      <input name="mailing" type="hidden" value={isMailingAccepted} />
       <input
         name="target"
         type="hidden"
@@ -127,32 +139,34 @@ function Form({ targetArray }) {
         className="Form__button"
         type="submit"
         theme="main"
-        disabled={age && name && activeTarget && email ? false : true}
+        disabled={age && name && activeTarget && email && isPolicyAccepted ? false : true}
         children="Подписаться"
       />
       <div className="Form__checkbox-wrapper">
-        <input
-          className="Form__checkbox"
-          name="policy"
-          type="checkbox"
-          required
-          defaultChecked
+        <div
+          className={classNames(
+            "Form__checkbox",
+            { "Form__checkbox_checked": isPolicyAccepted }
+          )}
+          onClick={handlePolicyCheckbox}
         />
-        <label className="Form__checkbox-label" htmlFor="policy">
+        <p className="Form__checkbox-label">
           При нажатии на кнопку вы соглашаетесь
           с условиями <a href="/policy">Политики конфиденциальности</a>
-        </label>
+        </p>
       </div>
 
       <div className="Form__checkbox-wrapper">
-        <input
-          className="Form__checkbox"
-          name="mailing"
-          type="checkbox"
+        <div
+          className={classNames(
+            "Form__checkbox",
+            { "Form__checkbox_checked": isMailingAccepted }
+          )}
+          onClick={handleMailingCheckbox}
         />
-        <label className="Form__checkbox-label" htmlFor="mailing">
+        <p className="Form__checkbox-label">
           Я согласен получать уведомления и предложения
-        </label>
+        </p>
       </div>
 
     </form >
