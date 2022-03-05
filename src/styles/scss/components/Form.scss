@@ -5,6 +5,9 @@
   width: 385px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 
   &__field {
     display: block;
@@ -19,6 +22,13 @@
     border: 1px solid colors.$inactive-color;
     border-radius: 6px;
     margin-bottom: 15px;
+    @media screen and (max-width: 480px) {
+      margin-bottom: 10px;
+      min-height: 44px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 1.4em;
+    }
     &::placeholder {
       color: colors.$inactive-color;
     }
@@ -40,11 +50,18 @@
 
   &__select-active {
     font-size: 16px;
-    padding: 0 20px;
-    height: 54px;
+    padding-right: 45px;
+    padding-left: 20px;
+    min-height: 54px;
+    height: min-content;
     display: flex;
     align-items: center;
     position: relative;
+    @media screen and (max-width: 480px) {
+      min-height: 44px;
+      padding: 5px 40px 5px 15px;
+      font-size: 14px;
+    }
     &_active {
       color: black;
     }
@@ -60,8 +77,12 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
+      @media screen and (max-width: 480px) {
+        right: 15px;
+      }
     }
   }
+
   &__select-popup {
     position: absolute;
     right: -1px;
@@ -77,6 +98,7 @@
       display: block;
     }
   }
+
   &__popup-item {
     height: 54px;
     padding: 0 20px;
@@ -84,13 +106,20 @@
     align-items: center;
     column-gap: 10px;
     border-top: 1px solid colors.$inactive-color;
+    @media screen and (max-width: 480px) {
+      height: 44px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
+
   &__popup-item-marker {
     margin: 0;
     height: 18px;
     width: 18px;
     border-radius: 50%;
     border: 1px solid colors.$inactive-color;
+    box-sizing: border-box;
     @include mixins.flex-centered();
     &_active {
       border: 1px solid colors.$interact-color;
@@ -104,6 +133,7 @@
       }
     }
   }
+
   &__popup-item-text {
     color: colors.$inactive-color;
     font-size: 16px;
@@ -111,17 +141,47 @@
     &_active {
       color: black;
     }
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+    }
   }
+
   &__button {
     width: 100%;
     margin-top: 20px;
+    @media screen and (max-width: 768px) {
+      margin-top: 15px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-top: 12px;
+      margin-bottom: 40px;
+      position: relative;
+      &::after {
+        content: "При нажатии на кнопку вы соглашаетесь с условиями";
+        display: block;
+        width: 70%;
+        position: absolute;
+        top: 56px;
+        font-family: "Roboto", sans-serif;
+        color: black;
+        font-size: 12px;
+        text-transform: none;
+      }
+    }
   }
+
   &__checkbox-wrapper {
     margin-top: 15px;
     display: flex;
     column-gap: 8px;
     justify-content: left;
     align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      margin-top: 12px;
+    }
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
   }
   &__checkbox {
     margin: 0;
