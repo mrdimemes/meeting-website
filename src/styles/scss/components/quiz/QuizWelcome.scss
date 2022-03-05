@@ -1,20 +1,42 @@
 .quiz-welcome {
   &__massage {
     margin-bottom: 25px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 25px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: 16px;
+    }
   }
+
   &__question {
     font-family: "Comfortaa", cursive;
     font-weight: 700;
     font-size: 1.8em;
+    @media screen and (max-width: 768px) {
+      font-size: 1.6em;
+    }
   }
+
   &__button {
     margin-left: auto;
     margin-right: auto;
     width: 224px;
     margin-bottom: 20px;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: 12px;
+      width: 100%;
+    }
   }
+
   &__warning {
     font-weight: 300;
     font-size: 1.4em;
+    @media screen and (max-width: 480px) {
+      font-size: 1.2em;
+    }
   }
 }

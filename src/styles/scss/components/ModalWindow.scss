@@ -38,14 +38,14 @@
       width: auto;
       margin-left: 35px;
       margin-right: 35px;
-      padding-left: 35px;
-      padding-right: 35px;
+      padding: 50px 35px;
+      row-gap: 25px;
     }
     @media screen and (max-width: 480px) {
       margin-left: 16px;
       margin-right: 16px;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 36px 16px;
+      row-gap: 16px;
     }
   }
   &__massage {

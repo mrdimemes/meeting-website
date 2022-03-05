@@ -2,7 +2,6 @@
 @use "../../foundations/colors";
 @use "../../foundations/mixins";
 
-
 .Button {
   @include mixins.flex-centered();
   min-height: 54px;
@@ -16,11 +15,17 @@
   line-height: 1.125;
   cursor: pointer;
 
+  @media screen and (max-width: 480px) {
+    font-size: 1.4em;
+    min-height: 44px;
+  }
+
   &_theme_main {
     border: 0;
     background-color: colors.$interact-color;
     color: white;
   }
+
   &_theme_additional {
     border: 1px solid colors.$interact-color;
     background-color: colors.$additional-color;
