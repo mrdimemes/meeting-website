@@ -14,14 +14,13 @@ import "../styles/scss/pages/WelcomePage.scss";
 function WelcomePage({ finishQuiz }) {
   const localStorage = window.localStorage;
   const [step, setStep] = React.useState(
-    localStorage.getItem('step') ? localStorage.getItem('step') : 0
+    localStorage.getItem('step') ? Number(localStorage.getItem('step')) : 0
   );
 
   const nextStep = () => {
-    localStorage.setItem("step", step < 7 ? step + 1 : undefined);
-    setStep(step < 7 ? step + 1 : step);
+    localStorage.setItem("step", step + 1);
+    setStep(step + 1);
   }
-
 
   const noHandler = () => {
     alert("Очень жаль. В таком случае нам не по пути.");
@@ -30,28 +29,28 @@ function WelcomePage({ finishQuiz }) {
   const renderQuiz = () => {
     switch (step) {
       case 0:
-        return <QuizWelcome nextHandler={nextStep} />;
+        return (<QuizWelcome nextHandler={nextStep} />);
       case 1:
-        return <QuizFirstStep nextHandler={nextStep} />;
+        return (<QuizFirstStep nextHandler={nextStep} />);
       case 2:
-        return <QuizSecondStep
+        return (<QuizSecondStep
           yesHandler={nextStep}
           noHandler={noHandler}
-        />;
+        />);
       case 3:
-        return <QuizThirdStep
+        return (<QuizThirdStep
           yesHandler={nextStep}
           noHandler={noHandler}
-        />;
+        />);
       case 4:
-        return <QuizFourthStep
+        return (<QuizFourthStep
           yesHandler={nextStep}
           noHandler={noHandler}
-        />;
+        />);
       case 5:
-        return <QuizSuccess nextHandler={nextStep} />;
+        return (<QuizSuccess nextHandler={nextStep} />);
       case 6:
-        return <QuizForm submitHandler={finishQuiz} />;
+        return (<QuizForm submitHandler={finishQuiz} />);
       default:
         break;
     }
