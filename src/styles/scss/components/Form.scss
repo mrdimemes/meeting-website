@@ -49,6 +49,7 @@
   }
 
   &__select-active {
+    cursor: pointer;
     font-size: 16px;
     padding-right: 45px;
     padding-left: 20px;
@@ -100,6 +101,7 @@
   }
 
   &__popup-item {
+    cursor: pointer;
     height: 54px;
     padding: 0 20px;
     display: flex;
@@ -183,6 +185,7 @@
       display: none;
     }
   }
+
   &__checkbox {
     margin: 0;
     width: 20px;
@@ -198,6 +201,7 @@
       background-position: center;
     }
   }
+
   &__checkbox-label {
     font-size: 1.4em;
     font-weight: 300;

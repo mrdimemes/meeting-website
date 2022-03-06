@@ -14,6 +14,7 @@
   font-size: 1.6em;
   line-height: 1.125;
   cursor: pointer;
+  transition: .5s;
 
   @media screen and (max-width: 480px) {
     font-size: 1.4em;
@@ -24,15 +25,26 @@
     border: 0;
     background-color: colors.$interact-color;
     color: white;
+    &:hover {
+      border: 1px solid colors.$interact-color;
+      background-color: colors.$additional-color;
+      color: colors.$interact-color;
+    }
   }
 
   &_theme_additional {
     border: 1px solid colors.$interact-color;
     background-color: colors.$additional-color;
     color: colors.$interact-color;
+    &:hover {
+      border: 1px solid black;
+      background-color: colors.$additional-color;
+      color: black;
+    }
   }
 
   &:disabled {
     opacity: 0.5;
+    cursor: not-allowed;
   }
 }
