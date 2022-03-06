@@ -1,7 +1,7 @@
 @use "../foundations/colors";
 
 .gallery-page {
-  padding: 100px 120px 120px 120px;
+  padding: 100px 0;
   background: url("../../../assets/images/png/gallery-bg.png") no-repeat left 2% top 130px / 25%,
     url("../../../assets/images/png/gallery-bg.png") no-repeat right 1% top 1000px / 25%,
     url("../../../assets/images/png/gallery-bg.png") no-repeat left 1% top 1560px / 25%, colors.$main-color;

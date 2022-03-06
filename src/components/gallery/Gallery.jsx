@@ -1,5 +1,6 @@
 import React from "react";
 import GalleryCard from "./GalleryCard";
+import "../../styles/scss/components/gallery/Gallery.scss";
 
 
 function Gallery() {
