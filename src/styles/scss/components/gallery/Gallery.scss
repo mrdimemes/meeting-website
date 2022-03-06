@@ -6,4 +6,13 @@
   row-gap: 43px;
   column-gap: 20px;
   margin: 0 20px;
+  @media screen and (max-width: 1024px) {
+    row-gap: 30px;
+    column-gap: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    row-gap: 12px;
+    column-gap: 14px;
+    margin: 0 16px;
+  }
 }
