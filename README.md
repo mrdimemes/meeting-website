@@ -26,3 +26,6 @@
 - Sass/SCSS
 - classnames
 
+# Деплой
+
+Производился на GitHub Pages посредством пакета gh-pages. Задеплоенное приложение доступно по [ссылке](https://mrdimemes.github.io/meeting-website/)
