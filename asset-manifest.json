@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/meeting-website/static/css/main.c72ad8f2.css",
+    "main.js": "/meeting-website/static/js/main.0a00b53b.js",
+    "static/media/3.png": "/meeting-website/static/media/3.3a0ca9d3b496091456f3.png",
+    "static/media/2.png": "/meeting-website/static/media/2.afcfe2ce876550bd8286.png",
+    "static/media/6.png": "/meeting-website/static/media/6.9c2a84550119310a11c5.png",
+    "static/media/5.png": "/meeting-website/static/media/5.34fd98157e6987a53d3b.png",
+    "static/media/4.png": "/meeting-website/static/media/4.3733d5fdcf99e0501a44.png",
+    "static/media/1.png": "/meeting-website/static/media/1.f9e501e077a49479c121.png",
+    "static/media/gallery-bg.png": "/meeting-website/static/media/gallery-bg.a14de31afaedfa57d334.png",
+    "static/media/modal-window-decoration.svg": "/meeting-website/static/media/modal-window-decoration.7f6d2540af90a992bba4.svg",
+    "index.html": "/meeting-website/index.html",
+    "static/media/mail-icon.svg": "/meeting-website/static/media/mail-icon.867f7249f14abb99d493.svg",
+    "static/media/checkbox.svg": "/meeting-website/static/media/checkbox.22665b4e5477e4849d14.svg",
+    "static/media/select-arrow.svg": "/meeting-website/static/media/select-arrow.71dc24f280b36b0e9e35.svg",
+    "main.c72ad8f2.css.map": "/meeting-website/static/css/main.c72ad8f2.css.map",
+    "main.0a00b53b.js.map": "/meeting-website/static/js/main.0a00b53b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c72ad8f2.css",
+    "static/js/main.0a00b53b.js"
+  ]
+}
