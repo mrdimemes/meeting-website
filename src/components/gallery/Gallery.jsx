@@ -15,9 +15,10 @@ function Gallery() {
 
   return (
     <section className="gallery">
-      {cards.map((card) => {
+      {cards.map((card, index) => {
         return (
           <GalleryCard
+            key={card.name + index}
             name={card.name}
             about={card.about}
             avatar={card.avatar}
